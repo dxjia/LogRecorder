@@ -1,7 +1,8 @@
 # LogRecorder
-Record system or application log to sdcard on Android device.
+可以记录系统或者指定应用的Log到sd卡的工具类。
 
-# Usage
+
+# 使用
 直接复制 [LogRecorder.java](https://github.com/dxjia/LogRecorder/blob/master/LogRecorder.java) 文件到你的工程中，使用方式如下：
 首先在`AndroidManifest.xml`中增加权限：
 ```
