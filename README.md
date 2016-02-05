@@ -3,13 +3,13 @@ Record system or application log to sdcard on Android device.
 
 # Usage
 直接复制 [LogRecorder.java](https://github.com/dxjia/LogRecorder/blob/master/LogRecorder.java) 文件到你的工程中，使用方式如下：
-首先在`AndroidManifest.xml`中增加权限：
+<br>首先在`AndroidManifest.xml`中增加权限：
 ```
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_LOGS" />
 ```
 
-然后在代码中合适的地方使用：
+然后在代码中合适的地方使用，之后Log就会自动开始记录，直到调用`logRecorder.stop()`，或者进程结束：
 ```
 	LogRecorder logRecorder
 			 = new LogRecorder.Builder(context)
@@ -38,13 +38,13 @@ Record system or application log to sdcard on Android device.
 > 单个log文件的大小限制，超过设置的限制时，会自动新起新的文件记录log，**`注意`**: 是以`KB`为单位的。
 
 ## setLogLevel()
-> 设置记录的log级别，默认2
-> 2 = verbose 
-> 3 = debug 
-> 4 = info 
-> 5 = warning 
-> 6 = error 
-> 7 = silent(不输出任何log)
+> 设置记录的log级别，默认2<br>
+>   2 = verbose <br>
+>   3 = debug <br>
+>   4 = info <br>
+>   5 = warning <br>
+>   6 = error <br>
+>   7 = silent(不输出任何log)
 
 ## addLogFilterTag()
 > 设置log过滤的tag，可以add多个，如`addLogFilterTag("ActivityManager")`表示只过滤“ActivityManager”的log 
